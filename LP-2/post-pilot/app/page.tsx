@@ -1,6 +1,14 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+
+import {
   Menubar,
   MenubarContent,
   MenubarItem,
@@ -9,9 +17,16 @@ import {
   MenubarShortcut,
   MenubarTrigger,
 } from "@/components/ui/menubar";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 import { useSpring, useTrail, animated } from "@react-spring/web";
 import React from "react";
+import { TwitterLogoIcon } from "@radix-ui/react-icons";
 
 export default function Home() {
   const [state, setState] = React.useState(false);
@@ -375,14 +390,332 @@ export default function Home() {
               <h1 className="text-xl font-bold text-slate-800">
                 Complimentary concierge service
               </h1>
-              <p className="text-slate-600">
+              <p className="text-slate-600 ">
                 DTC is in our DNA. Our pros will build your strategy and custom
                 designs using battle-tested best practices.
               </p>
             </div>
           </div>
         </section>
+        <section className="flex justify-center items-center flex-col p-4 space-y-10">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold">
+              Fast launch. Fast results. <br />
+              <em className="covered-by-your-grace-regular text-[#009387]">
+                Here's how.
+              </em>
+            </h1>
+          </div>
+          <div className=" px-20 w-3/6">
+            <Accordion type="single" collapsible>
+              <AccordionItem value="item-1">
+                <AccordionTrigger className="text-3xl text-left ">
+                  <p className="font-bold">
+                    <em className="covered-by-your-grace-regular mr-4 text-4xl text-[#009387]">
+                      1
+                    </em>
+                    Segment
+                  </p>
+                </AccordionTrigger>
+                <AccordionContent className="flex justify-between gap-2 px-4 items-center">
+                  <div className="h-16 border-2 w-1 rounded-lg bg-slate-700 border-slate-700"></div>
+                  <div className="text-lg">
+                    One-off announcements or automatically triggered flows.
+                    Customers receive their personalized cards within a week.
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-2">
+                <AccordionTrigger className="text-3xl text-left ">
+                  <p className="font-bold">
+                    <em className="covered-by-your-grace-regular mr-4 text-4xl text-[#009387]">
+                      2
+                    </em>
+                    Design
+                  </p>
+                </AccordionTrigger>
+                <AccordionContent className="flex justify-between gap-2 px-4 items-center">
+                  <div className="h-16 border-2 w-1 rounded-lg bg-slate-700 border-slate-700"></div>
+                  <div className="text-lg">
+                    One-off announcements or automatically triggered flows.
+                    Customers receive their personalized cards within a week.
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-3">
+                <AccordionTrigger className="text-3xl text-left ">
+                  <p className="font-bold">
+                    <em className="covered-by-your-grace-regular mr-4 text-4xl text-[#009387]">
+                      3
+                    </em>
+                    Send
+                  </p>
+                </AccordionTrigger>
+                <AccordionContent className="flex justify-between gap-2 px-4 items-center">
+                  <div className="h-16 border-2 w-1 bg-slate-700 rounded-lg border-slate-700"></div>
+                  <div className="text-lg">
+                    One-off announcements or automatically triggered flows.
+                    Customers receive their personalized cards within a week.
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-4">
+                <AccordionTrigger className="text-3xl text-left">
+                  <p className="font-bold">
+                    <em className="covered-by-your-grace-regular text-4xl mr-4 text-[#009387]">
+                      4
+                    </em>
+                    Convert
+                  </p>
+                </AccordionTrigger>
+                <AccordionContent className="flex justify-between gap-2 px-4 items-center">
+                  <div className="h-16 border-2 w-1 rounded-lg bg-slate-700 border-slate-700"></div>
+                  <div className="text-lg">
+                    One-off announcements or automatically triggered flows.
+                    Customers receive their personalized cards within a week.
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
+        </section>
+        <section className="flex justify-center items-center py-20 flex-col">
+          <div>
+            <h1 className="font-bold text-5xl text-center text-slate-900">
+              PostPilot is 🔥 for{" "}
+              <em className="covered-by-your-grace-regular text-[#009387]">
+                DTC
+              </em>
+            </h1>
+          </div>
+          <div className="w-[400px] py-10">
+            <Carousel>
+              <CarouselContent>
+                <CarouselItem>
+                  <div className="border-2 rounded-lg p-3 w-96 border-slate-900">
+                    <div className="flex justify-between items-center">
+                      <div className="flex items-center gap-2">
+                        <img
+                          src="users/helen.svg"
+                          alt="foto de uma mulher asiática utilizando um chapéu de cor nude"
+                        />
+                        <div className="text-lg">
+                          <h1 className="text-slate-900 font-semibold">
+                            Helen Guo{" "}
+                          </h1>
+                          <p className="text-slate-600 font-medium">
+                            @HelenGuo_
+                          </p>
+                        </div>
+                      </div>
+                      <div>
+                        <TwitterLogoIcon width={30} height={30} />
+                      </div>
+                    </div>
+                    <div className="p-2">
+                      <p className="text-slate-700 text-lg">
+                        Been using <strong>PostPilot</strong> for years. Good
+                        for re-engagement. And you can get creative with your
+                        messaging.
+                      </p>
+                    </div>
+                  </div>
+                </CarouselItem>
+                <CarouselItem>
+                  <div className="border-2 rounded-lg p-3 w-96 border-slate-900">
+                    <div className="flex justify-between items-center">
+                      <div className="flex items-center gap-2">
+                        <img
+                          src="users/john.svg"
+                          alt="foto de uma mulher asiática utilizando um chapéu de cor nude"
+                        />
+                        <div className="text-lg">
+                          <h1 className="text-slate-900 font-semibold">
+                            Nathan Woods
+                          </h1>
+                          <p className="text-slate-600 font-medium">
+                            @HeisNathan
+                          </p>
+                        </div>
+                      </div>
+                      <div>
+                        <TwitterLogoIcon width={30} height={30} />
+                      </div>
+                    </div>
+                    <div className="p-2">
+                      <p className="text-slate-700 text-lg">
+                        We have done some rad winbacks to 360-720 days since
+                        purchase that have rocked. <strong>PostPilot</strong>{" "}
+                        team is one of my favs.
+                      </p>
+                    </div>
+                  </div>
+                </CarouselItem>
+                <CarouselItem>
+                  <div className="border-2 rounded-lg p-3 w-96 border-slate-900">
+                    <div className="flex justify-between items-center">
+                      <div className="flex items-center gap-2">
+                        <img
+                          src="users/chris.svg"
+                          alt="foto de uma mulher asiática utilizando um chapéu de cor nude"
+                        />
+                        <div className="text-lg">
+                          <h1 className="text-slate-900 font-semibold">
+                            Chris Lander
+                          </h1>
+                          <p className="text-slate-600 font-medium">
+                            @chris_basis
+                          </p>
+                        </div>
+                      </div>
+                      <div>
+                        <TwitterLogoIcon width={30} height={30} />
+                      </div>
+                    </div>
+                    <div className="p-2">
+                      <p className="text-slate-700 text-lg">
+                        Another +1 for <strong>PostPilot</strong>. Have only
+                        done winbacks, but it's been wonderful. Their team is
+                        also top notch. Super helpful every time we set
+                        something up.
+                      </p>
+                    </div>
+                  </div>
+                </CarouselItem>
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
+          </div>
+          <button className="bg-[#FF6D2C] translate-y-6 text-sm shadow-md rounded-xl hover:bg-[#ff7e47] transition-all border-slate-950 font-medium border-t-2 border-l-2 border-r-4 border-b-4 py-3 px-5 text-white uppercase">
+            {" "}
+            Try it Risk-free{" "}
+          </button>
+        </section>
+        <section className="flex justify-center items-center flex-col px-20 py-10">
+          <div className="flex justify-between items-center">
+            <div>
+              <img src="produto.svg" alt="" />
+            </div>
+            <div className="w-3/6 py-20 space-y-5">
+              <h1 className="text-7xl font-bold text-slate-800 text-left">
+                How{" "}
+                <em className="covered-by-your-grace-regular text-[#009387]">
+                  Obvi
+                </em>{" "}
+                Drives Profits with Hands-Off Postcard Campaigns
+              </h1>
+              <p className="text-slate-600 text-lg">
+                The 🚀 supplements brand wanted to offset high ad costs and
+                reach dormant customers. They scored 1000%+ ROIs.
+              </p>
+              <div className="flex justify-between items-center">
+                <div className="text-left">
+                  <h1 className="text-3xl font-bold">1468%</h1>
+                  <p className="text-xl text-slate-600">roi</p>
+                </div>
+                <div className="text-left">
+                  <h1 className="text-3xl font-bold">8.59%</h1>
+                  <p className="text-xl text-slate-600">Conversion Rate</p>
+                </div>
+                <div className="text-left">
+                  <h1 className="text-3xl font-bold">$73,457</h1>
+                  <p className="text-xl text-slate-600">Sales Generated</p>
+                </div>
+              </div>
+              <button className="py-2 px-6 border-b-4 border-r-4 border-t-2 border-l-2 border-slate-900 hover:bg-slate-300 transition-all rounded-xl text-center text-lg font-semibold uppercase">
+                Read Case study
+              </button>
+            </div>
+          </div>
+          <div className="w-3/6 flex justify-between items-start gap-3 self-end">
+            <img
+              src="company/obvi.svg"
+              alt=""
+              width={100}
+              className="border-b-4 pb-2 border-[#009387] rounded-sm"
+            />
+            <img src="company/boom.svg" alt="" width={150} />
+            <img src="company/bulletproof.svg" alt="" width={200} />
+            <img src="company/baby.svg" alt="" width={200} />
+          </div>
+        </section>
+        <section className="flex bg-[#FF6D2C] justify-between items-center w-full h-[644px] px-10">
+          <article className="z-10 w-4/6 my-40 space-y-6  m-10">
+            <h1 className="text-8xl font-bold text-slate-100">
+              Try PostPilot <br /> Risk-Free
+            </h1>
+            <p className="text-slate-200 text-2xl w-4/6">
+              No contracts. No commitments. Guaranteed results.*
+            </p>
+            <div className="w-3/6 gap-10 flex justify-start items-center">
+              <button className="bg-slate-100 text-slate-900 shadow-md rounded-xl hover:bg-slate-200 transition-all border-slate-950 font-medium border-t-2 border-l-2 border-r-4 border-b-4 py-3 px-5  uppercase">
+                Try it Risk-free
+              </button>
+              <div className="text-slate-950 font-semibold flex items-center justify-center flex-col">
+                <img src="white-stars.svg" alt="estrelas douradas" />
+                <p className="font-semibold text-slate-100">
+                  5.0 Shopify Rating
+                </p>
+              </div>
+            </div>
+            <p className="text-slate-200 text-lg">
+              * for qualified brands with over $1m annual Shopify revenue.
+            </p>
+          </article>
+          <figure className="absolute right-4 z-0">
+            <img src="pow-demo.svg" alt="imagem ilustrativa" width={642} />
+          </figure>
+        </section>
+        <section className="py-20 flex justify-center items-center flex-col space-y-10">
+          <div>
+            <h1 className="text-7xl font-bold">
+              Latest trends &{" "}
+              <em className="covered-by-your-grace-regular text-[#009387]">
+                insights
+              </em>
+            </h1>
+          </div>
+          <div className="flex px-5 justify-between items-center gap-10">
+            <div className="flex justify-center items-center gap-5 flex-col">
+              <img src="latest-trends/image1.svg" alt="" width={300} />
+              <p className="text-2xl text-center font-semibold">
+                3 Low-Cost Campaigns <br />
+                You Must Run to Win BFCM
+              </p>
+            </div>
+            <div className="flex justify-center items-center gap-5 flex-col">
+              <img src="latest-trends/image2.svg" alt="" width={300} />
+              <p className="text-2xl text-center font-semibold">
+                Postcard Marketing: The <br /> Definitive Guide to High ROI
+                [2022]
+              </p>
+            </div>
+            <div className="flex justify-center items-center gap-5 flex-col">
+              <img src="latest-trends/image3.svg" alt="" width={300} />
+              <p className="text-2xl text-center font-semibold">
+                The Ultimate Guide to <br /> Thank You Notes for Ecommerce
+              </p>
+            </div>
+          </div>
+        </section>
       </main>
+      <footer className="flex justify-between items-center p-10">
+        <div className="space-y-2">
+          <img src="logo.svg" alt="" width={200} />
+          <p className="text-lg text-slate-700">
+            © 2022 PostPilot, Inc. All rights reserved.
+          </p>
+        </div>
+        <div className="flex justify-center items-center gap-5">
+          <button className="border-b-4 border-r-4 border-t-2 border-l-2 border-slate-800 rounded-xl py-2 px-6 text-slate-900 text-lg">
+            login
+          </button>
+          <button className="border-b-4 border-r-4 border-t-2 border-l-2 bg-[#FF6D2C] border-slate-800 rounded-xl py-2 px-6 text-slate-100 text-lg">
+            Try it for free
+          </button>
+        </div>
+      </footer>
     </>
   );
 }
