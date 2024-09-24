@@ -15,8 +15,18 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { ArrowRight, Check } from "lucide-react";
+import {
+  ArrowRight,
+  Check,
+  Facebook,
+  Instagram,
+  Linkedin,
+  Twitter,
+  Youtube,
+} from "lucide-react";
 import Link from "next/link";
+import { redirect } from "next/navigation";
+import { InstagramLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
 
 export default function Home() {
   return (
@@ -413,7 +423,85 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <section className="bg-[#FFD02F] justify-center w-full p-10 items-center flex flex-col">
+          <div className="flex justify-center items-center gap-7 flex-col">
+            <h1 className="text-center text-darkblue text-5xl font-bold">
+              Why companies large <br /> and small trust Miro
+            </h1>
+            <a
+              className="decoration-transparent text-darkblue text-lg border-b-2 border-darkblue"
+              href="$"
+            >
+              Contact Sales to request a demo
+            </a>
+          </div>
+          <div className="grid grid-cols-3 grid-rows-2 w-4/6 gap-10 p-10">
+            <div className="text-center text-darkblue flex items-center flex-col gap-4 m-4">
+              <img src="texts/text1.svg" alt="ISO" />
+              <p>ISO-27001 enterprise-grade security compliant</p>
+            </div>
+            <div className="text-center text-darkblue text-lg flex items-center flex-col gap-4 m-4">
+              <img src="texts/text2.svg" alt="ISO" />
+              <p>Visual Collaboration Platform on G2</p>
+            </div>
+            <div className="text-center text-darkblue text-lg flex items-center flex-col gap-4 m-4">
+              <img src="texts/text3.svg" alt="ISO" />
+              <p>of the Fortune 100 are customers</p>
+            </div>
+            <div className="text-center text-darkblue text-lg flex items-center flex-col gap-4 m-4">
+              <img src="texts/text4.svg" alt="ISO" />
+              <p>community- and expert-built templates</p>
+            </div>
+            <div className="text-center text-darkblue text-lg flex items-center flex-col gap-4 m-4">
+              <img src="texts/text5.svg" alt="ISO" />
+              <p>users around the world</p>
+            </div>
+            <div className="text-center text-darkblue text-lg flex items-center flex-col gap-4 m-4">
+              <img src="texts/text6.svg" alt="ISO" />
+              <p>integrations with technology partners</p>
+            </div>
+          </div>
+        </section>
+        <section className="bg-darkblue h-96 shadow-xl space-y-7 flex justify-center items-center flex-col px-10 py-20 rounded-xl w-5/6 m-20">
+          <div className="text-center">
+            <h1 className="text-5xl text-zinc-50 font-bold">
+              Join 45M+ users today
+            </h1>
+            <p className="text-zinc-400 ">Start for free — upgrade anytime.</p>
+            <span className="text-zinc-500 border-b-[1px] border-zinc-500 hover:text-zinc-50 hover:border-zinc-50 ">
+              Joining as an organization? Contact Sales
+            </span>
+          </div>
+          <button className=" py-1 px-5 text-center transition-all hover:bg-darkblue hover:border bg-lightblue rounded-2xl text-zinc-50 flex gap-2 items-center">
+            Sign up free <ArrowRight size={15} />
+          </button>
+        </section>
       </main>
+      <footer className="bg-darkblue flex justify-between items-center px-10 py-6">
+        <div className="text-zinc-50 flex items-center justify-center gap-5">
+          <Twitter size={20} />
+          <Facebook size={20} />
+          <Instagram size={20} />
+          <Linkedin size={20} />
+          <Youtube size={20} />
+          <span>© 2024 Miro</span>
+          <span>Terms of Service</span>
+          <span>Privacy Policy</span>
+          <span>Manage Cookies</span>
+        </div>
+        <div className="flex items-center gap-5">
+          <button className="flex justify-center items-center text-sm gap-2 text-zinc-50 border-2 p-2 rounded-xl">
+            <img src="teste.svg" alt="" />
+            <span>
+              Download on the <br />
+              <strong>App Store</strong>
+            </span>
+          </button>
+          <button className=" py-1 px-5 text-center transition-all hover:bg-darkblue hover:border bg-lightblue rounded-2xl text-zinc-50 flex gap-2 items-center">
+            Sign up free <ArrowRight size={15} />
+          </button>
+        </div>
+      </footer>
     </>
   );
 }
